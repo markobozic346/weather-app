@@ -20,20 +20,19 @@ function App() {
     
   }, [cityName]);
 
-  const getCity = () => {
-    return 
-  }
+  
 
-  const handleClick = () => {
-    localStorage['city'] = change;
+ function handleClick() {
+    setCityName(change);
     
   }
 
   return <div className="App">
     <input type='text' className='something' onChange={e => setChange(e.target.value)}/>
-    <button onClick={() => {handleClick}}>Search</button>
+    <button onClick={() => handleClick}>Get Data</button>
     
   </div>
+  
 }
 
 export default App;
