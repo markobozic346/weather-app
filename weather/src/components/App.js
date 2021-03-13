@@ -1,10 +1,13 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
+import Weather from './Weather';
 function App() {
-
+  //data from api
   const [data, setData] = useState("");
+
+  //data from input field
   const [change, setChange] = useState("");
-  const [cityName, setCityName] = useState(localStorage.hasOwnProperty('city') ? localStorage.getItem['city'] : 'Beograd');
+  const [cityName, setCityName] = useState("");
   
   useEffect(() => {
     async function fetchData() {
@@ -13,24 +16,24 @@ function App() {
       );
       let data = await response.json();
       setData(data);
+      console.log(data) 
     }
-    fetchData();
 
     
+     isCityEntered() && fetchData() ;
     
   }, [cityName]);
 
+
+
+  var isCityEntered = () => (
+    (cityName !== "") ? true : false
+  )
   
-
- function handleClick() {
-    setCityName(change);
-    
-  }
-
   return <div className="App">
-    <input type='text' className='something' onChange={e => setChange(e.target.value)}/>
-    <button onClick={() => handleClick}>Get Data</button>
-    
+    <input type='text' className='something' placeholder="enter city name"onChange={e => setChange(e.target.value)}/>
+    <button onClick={() => {setCityName(change)}}>Get Data</button>
+  {isCityEntered() && <Weather /> }
   </div>
   
 }
