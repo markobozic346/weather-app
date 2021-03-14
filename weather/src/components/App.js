@@ -18,7 +18,7 @@ function App() {
       );
       let data = await response.json();
       setData(data);
-      console.log(data) 
+      console.log(data);
     }
 
     // if true call fetchData function
@@ -32,9 +32,11 @@ function App() {
   )
   
   return <div className="App">
-    <input type='text' className='something' placeholder="Enter City Name"onChange={e => setChange(e.target.value)}/>
-    <button onClick={() => {setCityName(change)}}>Get Data</button>
     
+      <input type='text' className='something' placeholder="Enter City Name"onChange={e => setChange(e.target.value)}/>
+      <button onClick={() => {setCityName(change)}}>Get Data</button>
+    
+    {/* Renders Weather component only if city is entered */}
   {isCityEntered() && <Weather cityName={data.name} temperatureInfo={data.main} weatherInfo={data.weather}/>}
   </div>
   
