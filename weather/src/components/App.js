@@ -18,7 +18,7 @@ function App() {
       );
       let data = await response.json();
       setData(data);
-      console.log(data);
+      
     }
 
     // if true call fetchData function
@@ -37,7 +37,7 @@ function App() {
       <button className= 'btn-search'onClick={() => {setCityName(change)}}>Get Data</button>
     </div>
     {/* Renders Weather component only if city is entered */}
-  {isCityEntered() && <Weather cityName={data.name} temperatureInfo={data.main} weatherInfo={data.weather}/>}
+  {isCityEntered() && <Weather code={data.cod} cityName={data.name} temperatureInfo={data.main} weatherInfo={data.weather}/>}
   </div>
   
 }
