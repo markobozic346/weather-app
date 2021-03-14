@@ -1,3 +1,26 @@
 .App{
     text-align: center;
 }
+.input-container{
+    width: 350px;
+    height: 80px;
+    margin: 20px auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.city-input{
+    font-size: 1rem;
+    margin: 32px 0;
+    border: none;
+    border-bottom: 1px solid #707070
+
+}
+.btn-search{
+    background-color: #707070;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700
+}
+.bigger{
+    font-size: 1.4rem;
+}

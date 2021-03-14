@@ -32,10 +32,10 @@ function App() {
   )
   
   return <div className="App">
-    
-      <input type='text' className='something' placeholder="Enter City Name"onChange={e => setChange(e.target.value)}/>
-      <button onClick={() => {setCityName(change)}}>Get Data</button>
-    
+    <div className="input-container">
+      <input type='text' className='city-input' placeholder="Enter City Name"onChange={e => setChange(e.target.value)}/>
+      <button className= 'btn-search'onClick={() => {setCityName(change)}}>Get Data</button>
+    </div>
     {/* Renders Weather component only if city is entered */}
   {isCityEntered() && <Weather cityName={data.name} temperatureInfo={data.main} weatherInfo={data.weather}/>}
   </div>

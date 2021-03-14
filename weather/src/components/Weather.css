@@ -17,6 +17,7 @@
     font-size: 5rem;
     font-weight: 900;
     margin: 0px;
+    color: #707070;
 }
 .icon, .description, .temp-min, .temp-max{
     display: inline-block;
@@ -37,6 +38,7 @@
     font-weight: 500;
     font-size: 1.2rem;
     margin: 0;
+    color: #707070
 }
 .temp-min, .temp-max{
     font-weight: 400;
